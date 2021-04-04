@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "stocks-309714": {
+      "hosting": {
+        "share-predictor": [
+          "stocks-309714"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "stocks-309714"
+  }
+}
