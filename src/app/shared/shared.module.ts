@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import {
   MatSnackBarModule,
   MatButtonModule,
@@ -38,6 +39,7 @@ import { DefaultPipe } from "./default.pipe";
     ReactiveFormsModule,
     CapitalizePipe,
     DefaultPipe,
+    NgxChartsModule,
     MatSnackBarModule,
     MatButtonModule,
     MatCardModule,
