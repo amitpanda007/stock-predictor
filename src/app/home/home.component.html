@@ -4,25 +4,9 @@
     name="search"
     type="text"
     [readonly]="readonlyMode"
-    placeholder="provide InterviewId to check your schedule"
-    [(ngModel)]="interviewId"
+    placeholder="Search with company name to see stocks"
+    [(ngModel)]="searchTerm"
     autocomplete="off"
-    (keydown.enter)="findInterview()"
-  />
-</div>
-
-<div *ngIf="privateMode">
-  <h3 class="notify">Privacy Mode is on. Please provide CandidateId</h3>
-</div>
-
-<div *ngIf="privateMode" class="search">
-  <input
-    class="search-input"
-    name="search"
-    type="text"
-    placeholder="provide CandidateId to show your schedule"
-    [(ngModel)]="candidateId"
-    autocomplete="off"
-    (keydown.enter)="findCandidate()"
+    (keydown.enter)="findStock()"
   />
 </div>

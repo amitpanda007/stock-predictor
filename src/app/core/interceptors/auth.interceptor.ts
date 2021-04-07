@@ -30,6 +30,7 @@ export class AuthInterceptor implements HttpInterceptor {
     if (!/.*\/auth\/.*/.test(req.url)) {
       console.log("HTTPInterceptorTriggered");
       console.log(req.url);
+      return next.handle(req);
 
       // if(/.*\/anonymous/.test(req.url) || /.*\/movie\//.test(req.url) || /.*\/movies\//.test(req.url)
       //   || /.*assets\//.test(req.url)) {
