@@ -12,6 +12,7 @@
 </div>
 
 <ngx-charts-line-chart
+  class="stock-chart"
   *ngIf="stockData"
   [view]="view"
   [scheme]="colorScheme"
@@ -27,5 +28,5 @@
   (select)="onSelect($event)"
   (activate)="onActivate($event)"
   (deactivate)="onDeactivate($event)"
-  >
+>
 </ngx-charts-line-chart>
