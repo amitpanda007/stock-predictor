@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   public searchTerm: string;
   public readonlyMode: boolean;
   stockData: any[];
-  stockResponseData: any[] = [];
+  stockResponseData: any[];
   stockMetaData: any;
   stockSubject = new BehaviorSubject([]);
 
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   showClosePrice = true;
 
   // options
-  view: any[] = [700, 300];
+  view: any[] = [800, 400];
   legend: boolean = true;
   showLabels: boolean = true;
   animations: boolean = true;
@@ -45,10 +45,7 @@ export class HomeComponent implements OnInit {
     private _snackBar: MatSnackBar
   ) {
     this.stockSubject.subscribe((data) => {
-      // console.log(data);
       this.stockData = [...data];
-      console.log(this.stockData);
-      console.log(this.stockResponseData);
     });
   }
 
@@ -113,6 +110,8 @@ export class HomeComponent implements OnInit {
 
   findStock() {
     const search = this.searchTerm.trim();
+    this.stockResponseData = [];
+
     if (search.length > 0) {
       console.log(search);
       this.homeService.getStockInformation(search).subscribe((resp: any) => {
